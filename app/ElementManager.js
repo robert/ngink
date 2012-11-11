@@ -57,6 +57,7 @@ ElementManager.prototype.displayElement = function(){
   var that = this;
   this.$el().ready(function(){
     that.$el().show();
+    console.log(that.$el());
     console.log("NGINK: Element displayed");
   });
   this.elementDisplayQueued = true;

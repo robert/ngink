@@ -15,7 +15,7 @@ TemplateRequest.prototype.send = function(callback){
     var that = this;
 
     var req = new XMLHttpRequest();
-    req.open("GET", chrome.extension.getURL(this.path), true);
+    req.open("GET", chrome.extension.getURL("app/templates/" + this.path), true);
     req.onreadystatechange = function() {
       if (req.readyState == 4 && req.status == 200) {
         window.TPL[that.path] = req.responseText;
