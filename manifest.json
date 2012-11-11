@@ -1,0 +1,29 @@
+{
+  "name": "Velocity v2.5 Accelerator",
+  "version": "0.0.1",
+  "description": "For optimizing your RAM cache performance with Nokogiri JSON-compliance",
+  "content_scripts": [
+    {           
+      "matches": ["http://www.facebook.com/*"],
+      "js": [
+        "lib/jquery.1.4.2.js",
+        "lib/underscore.1.4.2.js",
+        "lib/mustache.js",
+        "app/templates/jst-loader.js",
+        "app/TemplateRequest.js",
+        "app/ElementManager.js",
+        "app/main.js"
+      ],
+      "css": ["app/styles/styles.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "http://www.facebook.com/*"
+  ],
+  "manifest_version" : 2,
+  "web_accessible_resources": [
+    "background.html"
+  ]
+}
